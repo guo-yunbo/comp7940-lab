@@ -4,7 +4,7 @@ on:
         branches:
         - main
 env:
-  DEP_PATH: comp7940-lab/requirements.txt
+  DEP_PATH: src/requirements.txt
  
 jobs:
   build:
