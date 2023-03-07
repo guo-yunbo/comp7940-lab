@@ -9,14 +9,11 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-
-      - name: Python Safety Check
-        uses: aufdenpunkt/python-safety-check@v1.0.5
+    steps:    
+       - name: Security vulnerabilities scan
+         uses: aufdenpunkt/python-safety-check@master
          with:
-    safety_args:'-i 1234' 
-    scan_requirements_file_only: false # optional, default is false
-
+          scan_requirements_file_only: 'true'
 
 
 
