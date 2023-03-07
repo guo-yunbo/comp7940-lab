@@ -4,7 +4,7 @@ on:
         branches:
         - main
 env:
-  DEP_PATH: Repository/guo-yunbo/comp7940-lab/requirements.txt
+  DEP_PATH: requirements.txt
 
  
 jobs:
