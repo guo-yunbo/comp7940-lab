@@ -2,17 +2,16 @@ name: Deploy
 on:
     push:
         branches:
-            - main
+        - main
 jobs:
     build:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
-                with:
-                    fetch-depth: 0
+              with:
+                fetch-depth: 0
             - name: Deploy
-                env:
+              env:
                     HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
                     HEROKU_APP_NAME: "chatbot-for-robert-7940"  # Rename this to the app of your Heroku app.
-                run: git push -f
-https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
+              run: git push -f https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git main
