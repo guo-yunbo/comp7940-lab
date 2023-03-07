@@ -3,6 +3,9 @@ on:
     push:
         branches:
         - main
+env:
+  DEP_PATH: comp7940-lab/requirements.txt
+ 
 jobs:
   build:
     runs-on: ubuntu-latest
