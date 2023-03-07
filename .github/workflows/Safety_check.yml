@@ -2,7 +2,7 @@ name: Python Safety Check
 on:
     push:
         branches:
-        - master
+        - main
 env:
   DEP_PATH: comp7940-lab/requirements.txt
  
