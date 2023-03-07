@@ -3,6 +3,8 @@ on:
     push:
         branches:
         - main
+env:
+  DEP_PATH: comp7940-lab/requirements.txt
  
 jobs:
   build:
@@ -11,6 +13,9 @@ jobs:
 
       - name: Python Safety Check
         uses: aufdenpunkt/python-safety-check@v1.0.5
+         with:
+    safety_args:'-i 1234' 
+    scan_requirements_file_only: false # optional, default is false
 
 
 
