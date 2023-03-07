@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
        - name: Security vulnerabilities scan
-         uses: aufdenpunkt/python-safety-check@master
+         uses: aufdenpunkt/python-safety-check@main
          with:
           scan_requirements_file_only: 'true'
 
