@@ -14,7 +14,8 @@ jobs:
               with:
                 fetch-depth: 0
 
-            - uses: aufdenpunkt/python-safety-check@v1.0.5
+            - name: Security vulnerabilities scan
+              uses: aufdenpunkt/python-safety-check@vmaster
 
             - name: Deploy
               env:
