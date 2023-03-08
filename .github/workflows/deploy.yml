@@ -3,6 +3,9 @@ on:
     push:
         branches:
         - main
+env:
+  DEP_PATH: ./requirements.txt
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -10,6 +13,9 @@ jobs:
             - uses: actions/checkout@v2
               with:
                 fetch-depth: 0
+
+            - uses: aufdenpunkt/python-safety-check@v1.0.5
+
             - name: Deploy
               env:
                     HEROKU_API_KEY: ${{secrets.HEROKU_API_KEY}}
