@@ -2,7 +2,7 @@
 from telegram import Update
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 
-# The messageHandler is used for all message updates
+### The messageHandler is used for all message updates
 import os
 import configparser
 import logging
